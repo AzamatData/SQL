@@ -1,5 +1,5 @@
 --This file is home task #1 for SQL class:
-
+/*
 Task 1:
 Define the following terms: data, database, relational database, and table.
 
@@ -18,7 +18,7 @@ Task 2:
 List five key features of SQL Server.
 
 	* Backup and restore;
-	* User connectivity configuration (granting access to some users with specific privileges, max numbers of users allowed simultaneouslyÖ);
+	* User connectivity configuration (granting access to some users with specific privileges, max numbers of users allowed simultaneously‚Ä¶);
 	* Schedule database task (SQL Server agent, job agent);
 	* Database schema, Relational database;
 	* SQL server management studio helps to work with server;
@@ -30,11 +30,12 @@ What are the different authentication modes available when connecting to SQL Ser
 
 Task 4:
 Create a new database in SSMS named SchoolDB.
+*/
 	CREATE DATABASE SchoolDB;
-
+/*
 Task 5:
 Write and execute a query to create a table called Students with columns: StudentID (INT, PRIMARY KEY), Name (VARCHAR(50)), Age (INT).
-
+*/
 	USE SchoolDB;
 
 	CREATE TABLE Students(
@@ -44,6 +45,7 @@ Write and execute a query to create a table called Students with columns: Studen
 	)
 
 	SELECT * FROM Students;
+/*
 Task 6:
 Describe the differences between SQL Server, SSMS, and SQL.
 	SQL server is a relational database management system that supports a variety of transaction processing, business intelligence (BI) and 
@@ -55,21 +57,22 @@ Research and explain the different SQL commands: DQL, DML, DDL, DCL, TCL with ex
 
 	SQL is divided sub-languages such as:
 		* DQL: Doctrine query language is used for performing queries on the data within scheme objects. The most common definition of DQL is to get 
-		data from database. It is ìSELECTî statement. It doesnít change database, it just extracts data from database.
+		data from database. It is ‚ÄúSELECT‚Äù statement. It doesn‚Äôt change database, it just extracts data from database.
 		for example: SELECT * FROM tblMaaBStudents
 		* DML: Data Manipulation Language allows a database user to access and alter in a database that has been organized using proper data models. It makes 
-		changes to database using (INSERT, UPDATE, DELETEÖ). These commands are used to make changes inside a database.
+		changes to database using (INSERT, UPDATE, DELETE‚Ä¶). These commands are used to make changes inside a database.
 		* DDL: Data Definition Language is used to create and modify database/database objects. CREATE, ALTER, DROP, TRUNCATE commands are used.
 		* DCL: Data Control Language is used to work with security and access to database data. Commands are GRANT, REVOKE.
 		* TCL: Transaction Control Language is a relational database transaction control language. COMMIT, ROLLBAC, SAVEPOINT commands are used.
 Task 8:
 Write a query to insert three records into the Students table.
-
+*/
 INSERT INTO Students (StudentID, Name, Age) VALUES
 (1, 'TOM', 38)
 ,(2, 'JIM', 25)
 ,(3, 'JESSICA', 22)
 
+/*
 Task 9:
 Restore AdventureWorksDW2022.bak file to your server. (write its steps to submit) You can find the database from 
 this link :https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2022.bak
@@ -78,3 +81,4 @@ this link :https://github.com/Microsoft/sql-server-samples/releases/download/adv
 	path: "C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup" (I think the path is not so important)
 	3) From "Task" selected database source and destination. In "Options" ticked "WITH REPLACE" option.
 	it is restored. 
+*/
